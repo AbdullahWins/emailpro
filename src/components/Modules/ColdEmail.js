@@ -29,10 +29,10 @@ const ColdEmail = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto my-0 w-full px-4 pb-24 md:pb-4">
+    <section className="w-full mx-auto my-0 px-4 pb-24 md:pb-4">
       <div className="w-full py-4">
-        <section className="flex flex-col gap-4">
-          <div className="flex flex-col gap-2 p-4 bg-whiteHigh shadow-sm shadow-blackLow rounded-xl">
+        <section className="flex items-center justify-center w-full gap-4">
+          <div className="w-full h-full flex flex-col gap-2 p-4 bg-whiteHigh shadow-sm shadow-blackLow rounded-xl">
             <h1 className="text-xl font-bold text-blackHigh pt-2">
               Cold Email
             </h1>
@@ -70,7 +70,7 @@ const ColdEmail = () => {
               )}
             </button>
           </div>
-          <div className="p-4 bg-whiteHigh shadow-sm shadow-blackLow rounded-xl">
+          <div className="w-full h-full p-4 bg-whiteHigh shadow-sm shadow-blackLow rounded-xl">
             <h1 className="text-xl font-bold text-blackHigh py-2">Result</h1>
             <textarea
               className={`p-2 w-full rounded-xl border-none focus:outline-none bg-bgTextareaColor`}

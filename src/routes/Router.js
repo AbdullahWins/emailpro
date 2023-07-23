@@ -1,19 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
-import ITSupport from "../components/Modules/ITSupport";
-import BlogPost from "../components/Modules/BlogPost";
-import ColdEmail from "../components/Modules/ColdEmail";
-import ProductDescription from "../components/Modules/ProductDescription";
-import SocialMediaAdvert from "../components/Modules/SocialMediaAdvert";
-import JobDescription from "../components/Modules/JobDescription";
-import PersonalAssistant from "../components/Modules/PersonalAssistant";
-import AiFinancial from "../components/Modules/AiFinancial";
 import Home from "../pages/Home";
-import UniqueValue from "../components/Modules/UniqueValue";
-import CareerConsultant from "../components/Modules/CareerConsultant";
-import ProblemAgitateSolution from "../components/Modules/ProblemAgitateSolution";
-import AIDA from "../components/Modules/AIDA";
 import About from "../pages/About";
+import ColdEmail from "../components/Modules/ColdEmail";
 
 export const routes = createBrowserRouter([
   {
@@ -29,52 +18,8 @@ export const routes = createBrowserRouter([
         element: <About></About>,
       },
       {
-        path: "/blog",
-        element: <BlogPost></BlogPost>,
-      },
-      {
-        path: "/product",
-        element: <ProductDescription></ProductDescription>,
-      },
-      {
-        path: "/job",
-        element: <JobDescription></JobDescription>,
-      },
-      {
         path: "/cold",
         element: <ColdEmail></ColdEmail>,
-      },
-      {
-        path: "/social",
-        element: <SocialMediaAdvert></SocialMediaAdvert>,
-      },
-      {
-        path: "/itsupport",
-        element: <ITSupport></ITSupport>,
-      },
-      {
-        path: "/assistant",
-        element: <PersonalAssistant></PersonalAssistant>,
-      },
-      {
-        path: "/financial",
-        element: <AiFinancial></AiFinancial>,
-      },
-      {
-        path: "/unique",
-        element: <UniqueValue></UniqueValue>,
-      },
-      {
-        path: "/career",
-        element: <CareerConsultant></CareerConsultant>,
-      },
-      {
-        path: "/pas",
-        element: <ProblemAgitateSolution></ProblemAgitateSolution>,
-      },
-      {
-        path: "/aida",
-        element: <AIDA></AIDA>,
       },
     ],
   },

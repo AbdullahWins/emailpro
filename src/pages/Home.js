@@ -1,15 +1,15 @@
-import React, { useContext } from "react";
-import { AiContext } from "../contexts/AiContext";
-import moduleList from "../assets/json/moduleList.json";
-import Card from "../components/Shared/Card";
-import AdBanner from "../components/Ads/AdBanner";
+import React from "react";
+// import { AiContext } from "../contexts/AiContext";
+// import moduleList from "../assets/json/moduleList.json";
+// import Card from "../components/Shared/Card";
+import ColdEmail from "../components/Modules/ColdEmail";
 
 const Home = () => {
-  const { resetOutput } = useContext(AiContext);
+  // const { resetOutput } = useContext(AiContext);
 
   return (
     <div className="flex items-center justify-center">
-      <section className="flex flex-col items-center gap-4 max-w-6xl w-full">
+      {/* <section className="flex flex-col items-center gap-4 max-w-6xl w-full">
         <div className="flex flex-col items-center justify-center backdrop-blur-sm pt-4 md:pt-0">
           <p className="text-textHeaderColor text-3xl text-center px-3">
             Hello, Sir!
@@ -25,7 +25,9 @@ const Home = () => {
             );
           })}
         </div>
-        <AdBanner></AdBanner>
+      </section> */}
+      <section className="flex flex-col items-center gap-4 max-w-6xl w-full">
+        <ColdEmail></ColdEmail>
       </section>
     </div>
   );
