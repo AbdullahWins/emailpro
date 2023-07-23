@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
+  darkMode: "class",
   theme: {
     colors: {
       transparent: "transparent",
@@ -7,6 +8,8 @@ module.exports = {
       gradientColor: "#FF9D80",
       disabledColor: "#797979",
       pureBlackColor: "#000000",
+
+      primaryColor: "#FFFFFF",
 
       blackHigh: "#474747",
       blackMid: "#6C6C6C",
