@@ -31,7 +31,7 @@ const ColdEmail = () => {
 
   return (
     <section className="grid grid-cols-12 bg-whiteHigh dark:bg-blackMid text-blackHigh dark:text-whiteMid">
-      <div className="h-screen col-span-3 gap-2 p-4 shadow-sm shadow-blackLow relative">
+      <div className="h-screen col-span-3 gap-2 p-4 shadow-lg shadow-blackLow relative">
         <h1 className="text-xl text-center font-bold text-blackHigh dark:text-whiteHigh py-2">
           Cold Email
         </h1>
