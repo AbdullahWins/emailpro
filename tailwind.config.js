@@ -8,6 +8,8 @@ module.exports = {
       disabledColor: "#797979",
       pureBlackColor: "#000000",
 
+      primaryColor: "#FFFFFF",
+
       blackHigh: "#474747",
       blackMid: "#6C6C6C",
       blackLow: "#919191",
