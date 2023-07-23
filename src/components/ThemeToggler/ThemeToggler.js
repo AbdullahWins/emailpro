@@ -5,7 +5,7 @@ function ThemeToggler() {
   const { isDarkMode, handleToggleTheme } = useContext(ThemeContext);
 
   return (
-    <div className="flex items-center h-8 gap-3 p-2 border border-blueLight dark:border-navyDark relative rounded-full max-w-max">
+    <div className="flex items-center h-8 gap-3 p-2 bg-blackMid dark:bg-whiteMid relative rounded-full max-w-max">
       <svg
         width="16"
         height="16"
@@ -33,12 +33,12 @@ function ThemeToggler() {
       >
         <path
           d="M8.08865 2C8.09065 2 8.09333 2 8.09533 2C8.30799 2 8.39998 2.262 8.23998 2.4C7.11931 3.36467 6.50333 4.88132 6.81733 6.51599C7.166 8.32999 8.65866 9.71066 10.5153 9.95866C11.688 10.1153 12.774 9.81866 13.6373 9.22599C13.8127 9.10533 14.0453 9.26467 13.9927 9.46867C13.2567 12.346 10.4173 14.3967 7.17799 13.9347C4.48732 13.5507 2.36266 11.3913 2.04399 8.73C1.87733 7.342 2.19265 6.03401 2.84665 4.94668C3.90665 3.18268 5.85732 2 8.08865 2Z"
-          className={isDarkMode ? "fill-white" : "fill-slateSemi"}
+          className={isDarkMode ? "fill-blackMid" : "fill-whiteMid"}
         />
       </svg>
 
       <div
-        className={`w-6 h-6 bg-infoColor absolute left-1 rounded-full duration-300 ${
+        className={`w-6 h-6 bg-whiteLow absolute left-1 rounded-full duration-300 ${
           isDarkMode ? "translate-x-7" : "translate-x-0"
         }`}
       ></div>

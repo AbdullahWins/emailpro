@@ -30,16 +30,19 @@ const ColdEmail = () => {
   };
 
   return (
-    <section className="grid grid-cols-12 gap-2">
-      <div className="h-screen col-span-3 gap-2 p-4 bg-whiteHigh shadow-sm shadow-blackLow rounded-xl relative">
-        <h1 className="text-xl font-bold text-blackHigh pt-2">Cold Email</h1>
+    <section className="grid grid-cols-12 bg-whiteHigh dark:bg-blackMid text-blackHigh dark:text-whiteMid">
+      <div className="h-screen col-span-3 gap-2 p-4 shadow-sm shadow-blackLow relative">
+        <h1 className="text-xl text-center font-bold text-blackHigh dark:text-whiteHigh py-2">
+          Cold Email
+        </h1>
+        <label htmlFor="emailInput">Topic:</label>
         <textarea
           onChange={(e) => {
             handleChange(e);
           }}
-          className={`p-2 w-full rounded-xl border-solid border-2 border-bgTextareaColor placeholder-blackLow placeholder-opacity-25 focus:outline-none`}
-          placeholder="let me assist you with the help of AI"
-          name="blogInput"
+          className={`p-2 w-full rounded-xl border-solid bg-bgTextareaColor dark:bg-blackHigh placeholder-blackLow dark:placeholder-whiteLow placeholder-opacity-25 focus:outline-none`}
+          placeholder="briefly describe the topic.."
+          name="emailInput"
           id="input"
           cols="5"
           rows="5"
@@ -86,12 +89,14 @@ const ColdEmail = () => {
           )}
         </button> */}
 
-        <ThemeToggler></ThemeToggler>
+        <div className="absolute bottom-0 left-0 m-2">
+          <ThemeToggler></ThemeToggler>
+        </div>
       </div>
-      <div className="h-screen col-span-9 p-4 bg-whiteHigh shadow-sm shadow-blackLow rounded-xl relative">
+      <div className="h-screen col-span-9 gap-2 p-4 shadow-sm shadow-blackLow relative">
         <h1 className="text-xl font-bold text-blackHigh py-2">Result</h1>
         <textarea
-          className={`p-2 w-full rounded-xl border-none focus:outline-none bg-bgTextareaColor`}
+          className={`p-2 w-full rounded-xl border-none focus:outline-none bg-bgTextareaColor dark:bg-blackHigh`}
           placeholder=""
           defaultValue={output}
           cols="10"
