@@ -33,6 +33,7 @@ const ColdEmail = () => {
     <section className="min-h-screen grid grid-cols-12 bg-whiteHigh dark:bg-blackMid text-blackHigh dark:text-whiteMid">
       {/* input section */}
       <div className="h-screen col-span-3 gap-2 shadow-lg shadow-blackLow relative flex flex-col justify-between">
+        {/* top section of input */}
         <section className="flex flex-col overflow-auto p-4">
           <h1 className="text-xl text-center font-bold text-blackHigh dark:text-whiteHigh py-2">
             Cold Email
@@ -94,6 +95,7 @@ const ColdEmail = () => {
             ></input>
           </div>
         </section>
+        {/* bottom section of input */}
         <section className="flex items-center justify-between">
           {/* dark mode toggle*/}
           <div className="m-4">
@@ -121,6 +123,7 @@ const ColdEmail = () => {
       </div>
       {/* output section */}
       <div className="h-screen col-span-9 shadow-sm shadow-blackLow flex flex-col justify-between">
+        {/* top section of output */}
         <section className="flex flex-col justify-between overflow-auto">
           <div className="p-4">
             <h1 className="text-xl text-center font-bold text-blackHigh dark:text-whiteHigh py-2">
@@ -137,6 +140,7 @@ const ColdEmail = () => {
             ></textarea>
           </div>
         </section>
+        {/* bottom section of output */}
         <section className="m-4 flex justify-between">
           <p></p>
           <button
