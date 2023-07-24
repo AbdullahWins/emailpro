@@ -3,8 +3,11 @@ import { AiContext } from "../../contexts/AiContext";
 import ThemeToggler from "../ThemeToggler/ThemeToggler";
 
 const ColdEmail = () => {
+  //imports from context
   const { output, processRequest, isLoading, setIsLoading } =
     useContext(AiContext);
+
+  //text counter state
   const [textCount, setTextCount] = useState(0);
 
   //scroll on top
@@ -12,6 +15,7 @@ const ColdEmail = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  //handles submit for generation
   const handleClick = () => {
     const input = document.getElementById("input")?.value;
     const prompt = "Write an engaging cold email about";
@@ -19,12 +23,14 @@ const ColdEmail = () => {
     processRequest(prompt, input);
   };
 
+  //handles inout changes to set text counter
   const handleChange = (event) => {
     event.preventDefault();
     const input = document.getElementById("input")?.value;
     setTextCount(input?.length);
   };
 
+  //handles text copy
   const handleCopy = () => {
     navigator.clipboard.writeText(output);
   };
