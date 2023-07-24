@@ -95,7 +95,7 @@ const ColdEmail = () => {
         {/* start generating button  */}
         <button
           disabled={isLoading || textCount < 1}
-          className={`absolute bottom-0 right-0 m-2 btn text-whiteHigh bg-btnColor disabled:text-btnDisabledTextColor disabled:bg-btnColorDisabled hover:bg-btnColor border-none btn-md w-24 rounded-xl normal-case my-2 ${
+          className={`absolute bottom-0 right-0 m-4 btn btn-sm text-whiteHigh bg-btnColor disabled:text-btnDisabledTextColor disabled:bg-btnColorDisabled hover:bg-btnColor border-none w-16 h-4 rounded-xl normal-case ${
             isLoading ? "bg-btnColor" : "text-whiteLow"
           }`}
           onClick={handleClick}
@@ -105,15 +105,13 @@ const ColdEmail = () => {
               <span>
                 <i className="fa-solid fa-spinner fa-spin-pulse"></i>
               </span>
-              &nbsp;&nbsp;
-              <span className="text-btnDisabledTextColor">Generating...</span>
             </p>
           ) : (
-            <p>Start</p>
+            <i class="fa-solid fa-arrow-right"></i>
           )}
         </button>
         {/* dark mode toggle*/}
-        <div className="absolute bottom-0 left-0 m-2">
+        <div className="absolute bottom-0 left-0 m-4">
           <ThemeToggler></ThemeToggler>
         </div>
       </div>
@@ -133,11 +131,11 @@ const ColdEmail = () => {
         ></textarea>
         <button
           disabled={isLoading || output?.length < 1}
-          className={`absolute bottom-0 right-0 m-2 btn text-whiteHigh bg-btnColor border-transparent disabled:text-btnDisabledTextColor disabled:bg-btnColorDisabled hover:bg-btnColor border-2 focus:border-blackLow focus:bg-btnColorDisabled focus:text-blackLow btn-md w-24 rounded-xl normal-case my-3`}
+          className={`absolute bottom-0 right-0 m-4 btn text-whiteHigh bg-btnColor border-transparent disabled:text-btnDisabledTextColor disabled:bg-btnColorDisabled hover:bg-btnColor border-2 focus:border-blackLow focus:bg-btnColorDisabled focus:text-blackLow btn-sm w-16 rounded-xl normal-case text-md`}
           onClick={handleCopy}
         >
           <p className="flex items-center justify-center gap-1">
-            <i className="fa-regular fa-copy"></i>Copy
+            <i className="fa-regular fa-copy"></i>
           </p>
         </button>
       </div>
