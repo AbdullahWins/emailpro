@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AiContext } from "../../contexts/AiContext";
 import ThemeToggler from "../ThemeToggler/ThemeToggler";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const ColdEmail = () => {
   //imports from context
+  const { logout } = useContext(AuthContext);
   const { output, processRequest, isLoading, setIsLoading } =
     useContext(AiContext);
 
@@ -21,6 +23,11 @@ const ColdEmail = () => {
     const prompt = "Write an engaging cold email about";
     setIsLoading(true);
     processRequest(prompt, input);
+  };
+
+  //handle logout
+  const handleLogout = () => {
+    logout();
   };
 
   //handles inout changes to set text counter
@@ -148,7 +155,9 @@ const ColdEmail = () => {
         </section>
         {/* bottom section of output */}
         <section className="m-4 flex justify-between">
-          <p></p>
+          <button onClick={handleLogout}>
+            <i className="fa-solid fa-right-from-bracket"></i>
+          </button>
           <button
             disabled={isLoading || output?.length < 1}
             className={`btn text-whiteHigh bg-btnColor border-transparent disabled:text-btnDisabledTextColor disabled:bg-btnColorDisabled hover:bg-btnColor border-2 focus:border-blackLow focus:bg-btnColorDisabled focus:text-blackLow btn-sm w-16 rounded-xl normal-case text-md`}
