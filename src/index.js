@@ -5,15 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AiProvider from "./contexts/AiContext";
 import ThemeProvider from "./contexts/ThemeContext";
+import AuthProvider from "./contexts/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AiProvider>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </AiProvider>
+    <AuthProvider>
+      <AiProvider>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </AiProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
 
