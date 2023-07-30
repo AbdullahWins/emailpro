@@ -15,6 +15,7 @@ import {
 import { firebaseApp } from "../firebase.config/firebase.config";
 
 export const AuthContext = createContext();
+
 const auth = getAuth(firebaseApp);
 
 const AuthProvider = ({ children }) => {
